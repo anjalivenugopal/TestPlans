@@ -1,0 +1,990 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>testspec Test Project - Anjali V</title>
+<link type="text/css" rel="stylesheet" href="https://ndzlabs.techmindz.com/testlink3/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo"  width=231 height=56 src="https://ndzlabs.techmindz.com/testlink3/gui/themes/default/images/tl-logo-transparent-25.png" /></p></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Test Project<br/>Test Suite: Test Project - Anjali V</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 15/11/2022</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><p style="padding-left: 20px;"><b><a href="#toc_1">1.Anjali V</a></b></p>
+<p style="padding-left: 30px;"><b><a href="#toc_1_1">1.1.Home</a></b></p>
+<p style="padding-left: 60px;"><a href="#toc_tc16">TP-3: Verify that the home page loads without any errors.</a></p><p style="padding-left: 60px;"><a href="#toc_tc20">TP-4: Verify header navigation links are present</a></p><p style="padding-left: 60px;"><a href="#toc_tc29">TP-6: Verify gallery images </a></p><p style="padding-left: 60px;"><a href="#toc_tc36">TP-7: Verify products are listed</a></p><p style="padding-left: 60px;"><a href="#toc_tc57">TP-10: Verify &quot;Previous&quot; &quot;Next&quot; is working</a></p><p style="padding-left: 60px;"><a href="#toc_tc74">TP-14: Verify Categories menu</a></p><p style="padding-left: 60px;"><a href="#toc_tc86">TP-15: Footer</a></p><p style="padding-left: 30px;"><b><a href="#toc_1_2">1.2.Product Details</a></b></p>
+<p style="padding-left: 60px;"><a href="#toc_tc156">TP-26: Verify user can view the Product details page</a></p><p style="padding-left: 60px;"><a href="#toc_tc164">TP-28: Verify user can view all Product Details</a></p><p style="padding-left: 60px;"><a href="#toc_tc171">TP-29: Verify Add to Cart</a></p><p style="padding-left: 30px;"><b><a href="#toc_1_3">1.3.Contact</a></b></p>
+<p style="padding-left: 60px;"><a href="#toc_tc185">TP-31: Verify Navigation to Contact </a></p><p style="padding-left: 60px;"><a href="#toc_tc194">TP-32: Verify form fields</a></p><p style="padding-left: 60px;"><a href="#toc_tc208">TP-34: Verify Contact Form Submission with Valid details</a></p><p style="padding-left: 60px;"><a href="#toc_tc229">TP-38: Verify Contact form submission with invalid details</a></p><p style="padding-left: 30px;"><b><a href="#toc_1_4">1.4.About Us</a></b></p>
+<p style="padding-left: 60px;"><a href="#toc_tc244">TP-40: Navigation to About Us</a></p><p style="padding-left: 60px;"><a href="#toc_tc249">TP-41: Verify contents are available in About Us</a></p><p style="padding-left: 30px;"><b><a href="#toc_1_5">1.5.Shopping Cart</a></b></p>
+<p style="padding-left: 60px;"><a href="#toc_tc255">TP-42: Verify the ability to view cart</a></p><p style="padding-left: 60px;"><a href="#toc_tc261">TP-44: Verify ability to add items in Cart</a></p><p style="padding-left: 60px;"><a href="#toc_tc274">TP-47: Verify the ability to remove items from cart</a></p><p style="padding-left: 60px;"><a href="#toc_tc291">TP-50: Verify ability to Place Order Successfully</a></p><p style="padding-left: 60px;"><a href="#toc_tc302">TP-51: Failure due to incorrect details filled in form</a></p><p style="padding-left: 30px;"><b><a href="#toc_1_6">1.6.Login</a></b></p>
+<p style="padding-left: 60px;"><a href="#toc_tc310">TP-52: Verify user can Navigate to Login</a></p><p style="padding-left: 60px;"><a href="#toc_tc316">TP-53: Verify the Login form fields</a></p><p style="padding-left: 60px;"><a href="#toc_tc320">TP-54: Verify LogIn with valid details</a></p><p style="padding-left: 60px;"><a href="#toc_tc327">TP-56: Verify Login with Invalid details</a></p><p style="padding-left: 30px;"><b><a href="#toc_1_7">1.7.Signup</a></b></p>
+<p style="padding-left: 60px;"><a href="#toc_tc336">TP-57: Verify Navigation to Signup</a></p><p style="padding-left: 60px;"><a href="#toc_tc344">TP-59: Verify Signup form fields</a></p><p style="padding-left: 60px;"><a href="#toc_tc348">TP-60: Verify Signup with valid inputs</a></p><p style="padding-left: 60px;"><a href="#toc_tc485">TP-93: Verify Signup with invalid details</a></p></div><a name='toc_1'></a>
+<h1 class='doclevel'>1.Test Suite : Anjali V</h1>
+<a name='toc_1_1'></a>
+<h2 class='doclevel'>1.1.Test Suite : Home</h2>
+<a name="toc_tc16"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-3: Verify that the home page loads without any errors.&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test to verify the website is avaialble<br />
+&nbsp;</p>
+
+<p>&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Page loads without visible errors</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc20"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-4: Verify header navigation links are present&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test to verify that header navigation links are present</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Verify following links are present in the header</p>
+
+<ol>
+	<li>Product Store&nbsp;https://www.demoblaze.com/index.html</li>
+	<li>Home&nbsp;https://www.demoblaze.com/index.html</li>
+	<li>Contact&nbsp;https://www.demoblaze.com/index.html#</li>
+	<li>About Us&nbsp;https://www.demoblaze.com/index.html#</li>
+	<li>Cart&nbsp;https://www.demoblaze.com/cart.html</li>
+	<li>Login&nbsp;https://www.demoblaze.com/index.html#</li>
+	<li>Signup&nbsp;https://www.demoblaze.com/index.html#</li>
+</ol>
+</td><td><p>Following links should be present.</p>
+
+<p>On the left side of header</p>
+
+<ol>
+	<li>Product Store&nbsp;https://www.demoblaze.com/index.html&nbsp;</li>
+</ol>
+
+<p>On the right side of header</p>
+
+<ol>
+	<li>Home&nbsp;https://www.demoblaze.com/index.html</li>
+	<li>Contact&nbsp;https://www.demoblaze.com/index.html#</li>
+	<li>About Us&nbsp;https://www.demoblaze.com/index.html#</li>
+	<li>Cart&nbsp;https://www.demoblaze.com/cart.html</li>
+	<li>Login&nbsp;https://www.demoblaze.com/index.html#</li>
+	<li>Signup&nbsp;https://www.demoblaze.com/index.html#</li>
+</ol>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc29"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-6: Verify gallery images &nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Tests if the product images are present in Gallery.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Page loads without visibile errors</p>
+</td></tr><tr><td width="5">2</td><td><ol>
+	<li>Verify the Gallery images with product are visibile under the header.&nbsp;</li>
+	<li>Click and slide the image to the left or right to change the slide.</li>
+	<li>Check if &lt;, &gt; arrows are correctly displayed.</li>
+	<li>Clicking on &lt;, &gt; changes the slide correctly.</li>
+</ol>
+</td><td><ol>
+	<li>Product images are present in Gallery</li>
+	<li>Images can be navigated using &lt;,&gt;</li>
+</ol>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc36"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-7: Verify products are listed&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test if products are listed on the home page</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Verify that a list of Products are listed</p>
+</td><td><p>A grid of Products are visibile</p>
+</td></tr><tr><td width="5">3</td><td><p>Verify that each listed product has an image</p>
+</td><td><p>Eact listed product has an image</p>
+</td></tr><tr><td width="5">4</td><td><p>Verify that each Product has a name</p>
+</td><td><p>Each listed product has a name</p>
+</td></tr><tr><td width="5">5</td><td><p>Verify that each product&#39;s price is shown</p>
+</td><td><p>Price should be visible under the name of the product</p>
+</td></tr><tr><td width="5">6</td><td><p>Verify a small discription is visible under the price</p>
+</td><td><p>Discription should be visible under the price</p>
+</td></tr><tr><td width="5">7</td><td><p>Click the product name</p>
+</td><td><p>User is navigated to product detailed page</p>
+
+<p>Example URL-&nbsp;https://www.demoblaze.com/prod.html?idp_=</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc57"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-10: Verify &quot;Previous&quot; &quot;Next&quot; is working&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test the &quot;Previous&quot; &quot;Next&quot; naviagation are working</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Verify only &quot;Next&quot; navigation&nbsp;is visible</p>
+</td><td><p>&quot;Next&quot;&nbsp;navigation is&nbsp;visible under the product listed page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click on &quot;Next&quot;</p>
+</td><td><p>New images of product should be displayed</p>
+</td></tr><tr><td width="5">4</td><td><p>Verify the &quot;previous&quot; naviation bar is displayed</p>
+</td><td><p>&quot;Previous&quot; navigation bar is displayed&nbsp;</p>
+</td></tr><tr><td width="5">5</td><td><p>Click on &quot;Previous&quot;</p>
+</td><td><p>Previous page with products should be displayed</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc74"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-14: Verify Categories menu&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Verify &quot;Categories&quot; menu</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Verify &quot;Categories&quot; menu</p>
+</td><td><p>&quot;Catagories&quot; menu should be visibile</p>
+</td></tr><tr><td width="5">3</td><td><p>Verify different catagories&nbsp;of products are listed under &quot;Categroies&quot; menu</p>
+</td><td><p>List</p>
+
+<ol>
+	<li>Phones</li>
+	<li>Laptops</li>
+	<li>Monitors</li>
+</ol>
+
+<p>&nbsp;</p>
+</td></tr><tr><td width="5">4</td><td><p>Verify categories of products&#39;s links are working</p>
+
+<ol>
+	<li>Click on Phones&nbsp;</li>
+	<li>Click on Laptops</li>
+	<li>Click on Monitors</li>
+</ol>
+</td><td><p>Each list of product categories link should be working</p>
+
+<ol>
+	<li>User should be able to click on phones and grid list of phones are displayed-&nbsp;&nbsp;https://www.demoblaze.com/index.html#</li>
+	<li>User should be able to client on Laptops and a grid list of Laptops are displayed- https://www.demoblaze.com/index.html#</li>
+	<li>User should be able to click on Monitors and a grid list of Monotors are listed-&nbsp;&nbsp;https://www.demoblaze.com/index.html#</li>
+</ol>
+</td></tr><tr><td width="5">5</td><td><p>Verify &quot;Previous&quot; and &quot;Next&quot; button is displayed and working for each catagory of Products</p>
+
+<p>&nbsp;</p>
+</td><td><ol>
+	<li>While clicking on &quot;Next&quot; button, only list of correct catagoty should be displayed.&nbsp;</li>
+	<li>While clicking on &quot;previous&quot; button, only list of correct catagory should be displayed.&nbsp;</li>
+	<li>If there is no products more than one page, no need of &quot;previous&quot; and &quot;next&quot; button.</li>
+</ol>
+
+<p>&nbsp;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc86"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-15: Footer&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Verify &quot;About Us, &quot;Get in Touch&quot; and &quot;Product Store&quot; is displayed in footer</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Verify &quot;About Us&quot; is displayed and a small description of the company is written under &quot;About Us&quot;</p>
+</td><td><p>&quot;About Us&quot;</p>
+
+<p>&quot;We believe performance needs to be validated at every stage of the software development cycle and our open source compatible, massively scalable platform makes that a reality.&quot;</p>
+</td></tr><tr><td width="5">3</td><td><p>Verify &quot;Get in Touch&quot; is displayed and contacted details are mentioned&nbsp;</p>
+</td><td><p>Contact details should be visible</p>
+
+<p><strong>Get in Touch</strong></p>
+
+<p>Address: 2390 El Camino Real</p>
+
+<p>Phone: +440 123456</p>
+
+<p>Email: demo@blazemeter.com</p>
+
+<p>&nbsp;</p>
+</td></tr><tr><td width="5">4</td><td><p>Verify name of the company &quot;Product Store&quot;&nbsp; with Logo is displayed</p>
+</td><td><p>User should be abale to see &quot;Product Store&quot;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_1_2'></a>
+<h2 class='doclevel'>1.2.Test Suite : Product Details</h2>
+<div><p>Test the ability to view details of a product</p>
+
+<p>Functionalies to test</p>
+
+<ol>
+	<li>Navigation to Product details</li>
+	<li>View all product details</li>
+	<li>View &quot;Add to Cart&quot; button</li>
+</ol>
+</div><a name="toc_tc156"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-26: Verify user can view the Product details page&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Last edit by:</span></td><td colspan="3">admin</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Tests to verify the product details page loads without errors</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+
+<p>&nbsp;</p>
+</td><td><p>Home page loads without anny errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on any procuct&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</td><td><p>Product details page loads without any errors</p>
+
+<p>&nbsp;</p>
+</td></tr><tr><td width="5">3</td><td></td><td></td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc164"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-28: Verify user can view all Product Details&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Verify the user can see all the Product details information&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home&nbsp;Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on product- https://www.demoblaze.com/prod.html?idp_=1</p>
+</td><td><p>The product details page loads without any errors</p>
+</td></tr><tr><td width="5">3</td><td><p>Verify the user can see all the Product Information</p>
+</td><td><p>User should see all the product information</p>
+
+<ol>
+	<li>Image of the Product</li>
+	<li>Name of the Product</li>
+	<li>Price</li>
+	<li>Product description</li>
+	<li>&quot;Add to cart&quot; Button</li>
+</ol>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc171"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-29: Verify Add to Cart&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Tests Add to Cart Button is working</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home&nbsp;Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on - <a href="https://www.demoblaze.com/prod.html?idp_=1">https://www.demoblaze.com/prod.html?idp_=1</a>&nbsp;</p>
+</td><td><p>The product details page loads without any errors</p>
+</td></tr><tr><td width="5">3</td><td><p>Click on Add to Cart button</p>
+</td><td><p>User should receive a Popup box saying the Product Added to Cart Sucessfully</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_1_3'></a>
+<h2 class='doclevel'>1.3.Test Suite : Contact</h2>
+<div><p>Test the ability to send a message to seller/ owner.</p>
+
+<p>Functionalty to test</p>
+
+<ol>
+	<li>Navigation to Contact&nbsp;</li>
+	<li>Verify form fields</li>
+	<li>Verify form submission
+	<ol>
+		<li>With valid details</li>
+		<li>With invalid details</li>
+	</ol>
+	</li>
+</ol>
+
+<p>&nbsp;</p>
+</div><a name="toc_tc185"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-31: Verify Navigation to Contact &nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Tests if the user can Navigate to Concact</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on &quot;Contact&quot; Button-&nbsp;https://www.demoblaze.com/prod.html?idp_=1#</p>
+</td><td><p>The Contact Form opens up</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc194"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-32: Verify form fields&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Last edit by:</span></td><td colspan="3">admin</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Verify the the Contact form fileds.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on Contact button-&nbsp;https://www.demoblaze.com/prod.html?idp_=1#</p>
+</td><td><p>A pop-up window should appear. It is a form with fields to fill.</p>
+
+<p>Heading- New Message</p>
+
+<p>Fields to fill:</p>
+
+<ol>
+	<li>Contact Email : Text</li>
+	<li>Contact Name : Text</li>
+	<li>Message : Text</li>
+</ol>
+
+<p>Button</p>
+
+<ol>
+	<li>Close</li>
+	<li>Send Message</li>
+</ol>
+
+<p>&nbsp;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc208"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-34: Verify Contact Form Submission with Valid details&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test if the user can fill Contact Form sucessfully</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on Contact Button- https://www.demoblaze.com/prod.html?idp_=1#</p>
+</td><td><p>A pop-up window should appear. It is a form with fields to fill.</p>
+
+<p>Heading- New Message</p>
+
+<p>Fields to fill:</p>
+
+<ol>
+	<li>Contact Email : Text</li>
+	<li>Contact Name : Text</li>
+	<li>Message : Text</li>
+</ol>
+
+<p>Button</p>
+
+<ol>
+	<li>Close</li>
+	<li>Send Message</li>
+</ol>
+</td></tr><tr><td width="5">3</td><td><p>Fill the Contact form with &quot; Contact Email&quot;, &quot;Contact Name&quot;, &quot;Message&quot; and press Send Message</p>
+</td><td><p>A popup box should appear saying- &quot;Thanks for the Message&quot;</p>
+
+<p>&nbsp;</p>
+</td></tr><tr><td width="5">4</td><td><p>Click the on Close Button in Popup box</p>
+</td><td><p>Pop up box should close</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc229"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-38: Verify Contact form submission with invalid details&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Tests if a user gets an error if&nbsp;invalid inputs entered</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on Contact button-&nbsp;<a href="https://www.demoblaze.com/prod.html?idp_=1#">https://www.demoblaze.com/prod.html?idp_=1#</a></p>
+</td><td><p>A pop-up window should appear. It is a form with fields to fill.</p>
+
+<p>Heading- New Message</p>
+
+<p>Fields to fill:</p>
+
+<ol>
+	<li>Contact Email : Text</li>
+	<li>Contact Name : Text</li>
+	<li>Message : Text</li>
+</ol>
+
+<p>Button</p>
+
+<ol>
+	<li>Close</li>
+	<li>Send Message</li>
+</ol>
+</td></tr><tr><td width="5">3</td><td><p>Press Send Message without filling any of the form fileds.</p>
+
+<ol>
+	<li>Contact Email : Text</li>
+	<li>Contact Name : Text</li>
+	<li>Message : Text</li>
+</ol>
+
+<p>&nbsp;</p>
+</td><td><p>User should get an error message aganist the required fileds.&nbsp;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_1_4'></a>
+<h2 class='doclevel'>1.4.Test Suite : About Us</h2>
+<div><p>Test the ability to view About Us</p>
+
+<p>Functionality to&nbsp;test</p>
+
+<ol>
+	<li>Naviagation to About us</li>
+	<li>Contant is available</li>
+</ol>
+</div><a name="toc_tc244"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-40: Navigation to About Us&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test if the user can Navigate to About Us</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on &quot;About Us&quot; Button-&nbsp;https://www.demoblaze.com/prod.html?idp_=1#</p>
+</td><td><p>The &quot;About Us&quot; pop up window should open</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc249"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-41: Verify contents are available in About Us&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Verify if all the contents are available&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on &quot;About Us&quot;&nbsp; Button:&nbsp;https://www.demoblaze.com/prod.html?idp_=1#</p>
+</td><td><p>A popup window should appear.</p>
+
+<p>Heading: About Us</p>
+
+<p>Content: Embedded YouTube video</p>
+</td></tr><tr><td width="5">3</td><td><p>Click on &quot;Close&quot; button</p>
+
+<p>User should be able to close the About Us popup window by clicking the close button.</p>
+</td><td><p>Popup window should close.&nbsp;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_1_5'></a>
+<h2 class='doclevel'>1.5.Test Suite : Shopping Cart</h2>
+<div><p>Test the ability to view cart</p>
+
+<p>Functionality to test</p>
+
+<ol>
+	<li>Ability to add items to cart</li>
+	<li>Ability to remove items from cart</li>
+	<li>Ability to place order
+	<ol>
+		<li>Successfully placing order</li>
+		<li>Failure due to incorrect data filled in form</li>
+	</ol>
+	</li>
+</ol>
+</div><a name="toc_tc255"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-42: Verify the ability to view cart&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test if the user can view cart</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on &quot;Cart&quot; button-&nbsp;https://www.demoblaze.com/cart.html#</p>
+</td><td><p>User is navigated to Cart</p>
+
+<p>URL-&nbsp;https://www.demoblaze.com/cart.html#</p>
+
+<p>An empty cart without any products with an empty form</p>
+
+<p>Cart Form</p>
+
+<ol>
+	<li>Products form
+	<ol>
+		<li>Pic</li>
+		<li>Title</li>
+		<li>Price</li>
+		<li>Delet- Button</li>
+	</ol>
+	</li>
+	<li>Total&nbsp;</li>
+	<li>Place Order- Button</li>
+</ol>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc261"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-44: Verify ability to add items in Cart&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test if the user can add items in Cart</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on product- <a href="https://www.demoblaze.com/prod.html?idp_=1">https://www.demoblaze.com/prod.html?idp_=1</a></p>
+</td><td><p>The product details page loads without any errors</p>
+</td></tr><tr><td width="5">3</td><td><p>Click on &quot;Add to Cart&quot; button-&nbsp;https://www.demoblaze.com/prod.html?idp_=1#</p>
+</td><td><p>User should receive a Popup box saying the &quot;Product Added to Cart Sucessfully&quot;</p>
+</td></tr><tr><td width="5">4</td><td><p>Click on &quot;Cart&quot; button-&nbsp;<a href="https://www.demoblaze.com/cart.html#">https://www.demoblaze.com/cart.html#</a></p>
+</td><td><p>User is navigated to Cart</p>
+
+<p>URL-&nbsp;https://www.demoblaze.com/cart.html#</p>
+
+<p>User should see the cart with Products added with filled form.</p>
+
+<ol>
+	<li>Products form
+	<ol>
+		<li>Pic</li>
+		<li>Title</li>
+		<li>Price</li>
+		<li>Delet- Button</li>
+	</ol>
+	</li>
+	<li>Total&nbsp;</li>
+	<li>Place Order- Button</li>
+</ol>
+
+<p>&nbsp;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc274"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-47: Verify the ability to remove items from cart&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test if the user can remove items from cart</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on product- <a href="https://www.demoblaze.com/prod.html?idp_=1">https://www.demoblaze.com/prod.html?idp_=1</a></p>
+</td><td><p>The product details page loads without any errors</p>
+</td></tr><tr><td width="5">3</td><td><p>Click on &quot;Add to Cart&quot; button-&nbsp;https://www.demoblaze.com/prod.html?idp_=2#</p>
+</td><td><p>User should receive a Popup box saying the Product Added to Cart Successfully</p>
+</td></tr><tr><td width="5">4</td><td><p>Click on &quot;Cart&quot; button-&nbsp;https://www.demoblaze.com/cart.html</p>
+</td><td><p>User is navigated to Cart</p>
+
+<p>URl- User is navigated to Cart</p>
+
+<p>User should see the cart with Products added with filled form.</p>
+
+<ol>
+	<li>Products form
+	<ol>
+		<li>Pic</li>
+		<li>Title</li>
+		<li>Price</li>
+		<li>Delet- Button</li>
+	</ol>
+	</li>
+	<li>Total&nbsp;</li>
+	<li>Place Order- Button</li>
+</ol>
+</td></tr><tr><td width="5">5</td><td><p>Click on &quot;Delet&quot; button</p>
+</td><td><p>The items should be removed from cart.&nbsp;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc291"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-50: Verify ability to Place Order Successfully&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test if the user can place order sucessfully</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on product- <a href="https://www.demoblaze.com/prod.html?idp_=1">https://www.demoblaze.com/prod.html?idp_=1</a></p>
+</td><td><p>The product details page loads without any errors</p>
+</td></tr><tr><td width="5">3</td><td><p>Click on &quot;Add to Cart&quot; button-&nbsp;https://www.demoblaze.com/prod.html?idp_=1#</p>
+</td><td><p>User should receive a Popup box saying the Product Added to Cart Successfully</p>
+</td></tr><tr><td width="5">4</td><td><p>Click on &quot;Cart&quot; button-&nbsp;<a href="https://www.demoblaze.com/cart.html#">https://www.demoblaze.com/cart.html#</a></p>
+</td><td><p>User is navigated to Cart</p>
+
+<p>URL-&nbsp;https://www.demoblaze.com/cart.html#</p>
+
+<p>User should see the cart with Products added with filled form.</p>
+
+<ol>
+	<li>Products form
+	<ol>
+		<li>Pic</li>
+		<li>Title</li>
+		<li>Price</li>
+		<li>Delete- Button</li>
+	</ol>
+	</li>
+	<li>Total&nbsp;</li>
+	<li>Place Order- Button</li>
+</ol>
+</td></tr><tr><td width="5">5</td><td><p>Click on &quot;Place Order&quot;</p>
+</td><td><p>User should receive a Popup window. It is a form need to be filled to place order.</p>
+
+<p>Heading- Place Order</p>
+
+<p>Below: Total Amount</p>
+
+<p>Fileds to Fill</p>
+
+<ol>
+	<li>Name: Text</li>
+	<li>Country- Text</li>
+	<li>City- text</li>
+	<li>Credit card- Text</li>
+	<li>Month- Text</li>
+	<li>Year- Text</li>
+</ol>
+
+<p>Buttons:</p>
+
+<ol>
+	<li>Close</li>
+	<li>Purchace</li>
+</ol>
+</td></tr><tr><td width="5">6</td><td><p>Fill all the details</p>
+</td><td><p>User should be able to Purchace sucessfully.</p>
+
+<p>By receing a popup window with order details.</p>
+
+<ol>
+	<li>Id:</li>
+	<li>Amount:</li>
+	<li>Card Number:</li>
+	<li>Name:&nbsp;</li>
+	<li>Date:&nbsp;</li>
+</ol>
+
+<p>Buttons</p>
+
+<ol>
+	<li>OK</li>
+</ol>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc302"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-51: Failure due to incorrect details filled in form&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Tests if payment is unsuccessfully without filling any of the details in payment form</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on product- <a href="https://www.demoblaze.com/prod.html?idp_=1">https://www.demoblaze.com/prod.html?idp_=1</a></p>
+</td><td><p>The product details page loads without any errors</p>
+</td></tr><tr><td width="5">3</td><td><p>Click on &quot;Add to Cart&quot;&nbsp;button</p>
+</td><td><p>User should receive a Popup box saying the Product Added to Cart Successfully</p>
+</td></tr><tr><td width="5">4</td><td><p>Click on &quot;Cart&quot; button-&nbsp;<a href="https://www.demoblaze.com/cart.html#">https://www.demoblaze.com/cart.html#</a></p>
+</td><td><p>User is navigated to Cart</p>
+
+<p>URL-&nbsp;https://www.demoblaze.com/cart.html#</p>
+
+<p>User should see the cart with Products added with filled form.</p>
+
+<ol>
+	<li>Products form
+	<ol>
+		<li>Pic</li>
+		<li>Title</li>
+		<li>Price</li>
+		<li>Delete- Button</li>
+	</ol>
+	</li>
+	<li>Total&nbsp;</li>
+	<li>Place Order- Button</li>
+</ol>
+</td></tr><tr><td width="5">5</td><td><p>Click on &quot;Place Order&quot;</p>
+</td><td><p>User should receive a Popup window. It is a form need to be filled to place order.</p>
+
+<p>Heading- Place Order</p>
+
+<p>Below: Total Amount</p>
+
+<p>Fileds to Fill</p>
+
+<ol>
+	<li>Name: Text</li>
+	<li>Country- Text</li>
+	<li>City- text</li>
+	<li>Credit card- Text</li>
+	<li>Month- Text</li>
+	<li>Year- Text</li>
+</ol>
+
+<p>Buttons:</p>
+
+<ol>
+	<li>Close</li>
+	<li>Purchace</li>
+</ol>
+
+<p>&nbsp;</p>
+</td></tr><tr><td width="5">6</td><td><p>If user did not fill any of the inputs.&nbsp;</p>
+</td><td><p>User should not be able to place order sucessfully</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_1_6'></a>
+<h2 class='doclevel'>1.6.Test Suite : Login</h2>
+<div><p>Test the ability to fill username and password</p>
+
+<ol>
+	<li>Navigation to Login</li>
+	<li>Verify form fields</li>
+	<li>Verify Login
+	<ol>
+		<li>With valid details</li>
+		<li>With invalid details</li>
+	</ol>
+	</li>
+</ol>
+</div><a name="toc_tc310"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-52: Verify user can Navigate to Login&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test if the uder can Navigate to Login</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on &quot;Login&quot; Button-&nbsp;https://www.demoblaze.com/index.html#</p>
+</td><td><p>A login form appears&nbsp;as popup</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc316"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-53: Verify the Login form fields&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test if the Login form can be filled</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on &quot;Login&quot; button -&nbsp;https://www.demoblaze.com/index.html#</p>
+</td><td><p>A pop-up window should appear. It is a Login form with fields to fill.</p>
+
+<p>Heading- Log in</p>
+
+<p>Fields to fill:</p>
+
+<ol>
+	<li>Username: text</li>
+	<li>Password:&nbsp;</li>
+</ol>
+
+<p>Button</p>
+
+<ol>
+	<li>Close</li>
+	<li>Log in</li>
+</ol>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc320"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-54: Verify LogIn with valid details&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Tests if a user can login with valid credentials</p>
+
+<p>&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on &quot;Login&quot; button-&nbsp;https://www.demoblaze.com/cart.html#</p>
+</td><td><p>A pop-up window should appear. It is a Login form with fields to fill.</p>
+
+<p>Heading- Log in</p>
+
+<p>Fields to fill:</p>
+
+<ol>
+	<li>Username: text</li>
+	<li>Password:&nbsp;</li>
+</ol>
+
+<p>Button</p>
+
+<ol>
+	<li>Close</li>
+	<li>Log in</li>
+</ol>
+</td></tr><tr><td width="5">3</td><td><p>Fill the form with valid credentails/ valid account username, password and click Login button</p>
+</td><td><p>User should be able to Login Successfully</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc327"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-56: Verify Login with Invalid details&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Tests if a user can Login with an Invalid Credentials</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+
+<p>&nbsp;</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on &quot;Login&quot; button-&nbsp;https://www.demoblaze.com/index.html#</p>
+</td><td><p>A pop-up window should appear. It is a Login form with fields to fill.</p>
+
+<p>Heading- Log in</p>
+
+<p>Fields to fill:</p>
+
+<ol>
+	<li>Username: text</li>
+	<li>Password:&nbsp;</li>
+</ol>
+
+<p>Buttons</p>
+
+<ol>
+	<li>Close</li>
+	<li>Log in</li>
+</ol>
+</td></tr><tr><td width="5">3</td><td><p>Fill invalid username or Password</p>
+</td><td><p>User should not be able to login and erroe message with invalid Login or Password</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_1_7'></a>
+<h2 class='doclevel'>1.7.Test Suite : Signup</h2>
+<div><p>Test the ability to Signup</p>
+
+<p>Functionalty to test</p>
+
+<ol>
+	<li>Navigation to Signup</li>
+	<li>Verify form fields</li>
+	<li>Verify signup
+	<ol>
+		<li>With valid details</li>
+		<li>With invalid details</li>
+	</ol>
+	</li>
+</ol>
+</div><a name="toc_tc336"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-57: Verify Navigation to Signup&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Tests if the user can navigate to Signup</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on &quot;Signup&quot; button</p>
+</td><td><p>A Signup form appears as popup</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc344"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-59: Verify Signup form fields&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Verify the Signup form fileds</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on &quot;Signup&quot; Button-&nbsp;&nbsp;https://www.demoblaze.com/index.html#</p>
+</td><td><p>A pop-up window should appear. It is a Signup form with fields to fill.</p>
+
+<p>Heading- SIgnup</p>
+
+<p>Fields to fill:</p>
+
+<ol>
+	<li>Username: text</li>
+	<li>Password:&nbsp;</li>
+</ol>
+
+<p>Button</p>
+
+<ol>
+	<li>Close</li>
+	<li>Log in</li>
+</ol>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc348"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-60: Verify Signup with valid inputs&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test if the user can signup with valid credentials</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td><p>Home Page loads without visible errors</p>
+</td></tr><tr><td width="5">2</td><td><p>Click on &quot;signup&quot; button-&nbsp;&nbsp;https://www.demoblaze.com/index.html#</p>
+</td><td><p>A pop-up window should appear. It is a Signup form with fields to fill.</p>
+
+<p>Heading- Signup</p>
+
+<p>Fields to fill:</p>
+
+<ol>
+	<li>Username: text</li>
+	<li>Password:&nbsp;</li>
+</ol>
+
+<p>Button</p>
+
+<ol>
+	<li>Close</li>
+	<li>Log in</li>
+</ol>
+</td></tr><tr><td width="5">3</td><td><p>Fill valid inputs and click on Signup button</p>
+</td><td><p>User should be able to Signup after filling Username and Password</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc485"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case TP-93: Verify Signup with invalid details&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">AnjaliV</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>test if user can signup with invalid details</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Go to URL-&nbsp;https://www.demoblaze.com/index.html</p>
+</td><td></td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+
+</body>
+</html>
